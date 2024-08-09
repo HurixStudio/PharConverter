@@ -23,7 +23,6 @@ if ($argc != 3) {
 $pharFile = $argv[1];
 $directory = $argv[2];
 
-// Supprimer le fichier PHAR s'il existe déjà
 if (file_exists($pharFile)) {
 	if (is_file($pharFile)) {
 		unlink($pharFile);
@@ -34,7 +33,6 @@ if (file_exists($pharFile)) {
 }
 
 try {
-	// Vérifier si le répertoire existe
 	if (!is_dir($directory)) {
 		echo "Erreur : le répertoire '$directory' n'existe pas.\n";
 		exit(1);
